@@ -31,5 +31,7 @@ sudo pacman -S figlet
 Install console-stopwatch
 
 ```sh
+git clone https://github.com/FirsMak/console-stopwatch.git
+cd console-stopwatch/
 sudo cp stopwatch /usr/bin/
 ```
