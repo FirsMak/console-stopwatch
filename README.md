@@ -9,18 +9,10 @@ Stopwatch uses figlet to display the time
 
 Install figlet
 
-### Ubuntu
+### Ubuntu / Linux Mint / Debian
 ```sh
 sudo apt update -y
 sudo apt install figlet
-```
-
-### Debian
-```sh
-sudo apt update
-sudo apt install snapd
-sudo snap install core
-sudo snap install figlet
 ```
 
 ### Arch
