@@ -1,0 +1,40 @@
+#!/bin/bash
+if [ "$1" == "--help" ]; then
+	echo press any button to start the stopwatch
+	echo ---------------------------------------
+	echo press any button to stop the stopwatch
+fi
+
+function timeOutput {
+	if [ "$a" -gt 59 -a "$a" -lt 3600 ]; then
+		let "min=a/60"
+		let "sec=a%60"
+		figlet -w $(tput cols) -c $min m $sec s
+	elif [ "$a" -gt 3600 ]; then 
+		let "h=a/3600"
+		let "min=(a%3600)/60"
+		let "sec=(a%3600)%60"
+		figlet -w $(tput cols) -c $h h $min m $sec s
+	else
+		figlet -w $(tput cols) -c $a "s"
+	fi
+}
+
+while true; do
+a=0
+read -n 1 var
+if [ $var != "" ]; then
+	while true; do
+		clear
+		timeOutput
+	read -t 1 -n 1 rs
+	if [ "$rs" != "" ]; then
+		clear
+		timeOutput
+		break
+	fi
+	let "a+=1"
+	done
+fi
+
+done
