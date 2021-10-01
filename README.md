@@ -1,12 +1,11 @@
 # console-stopwatch
 ## _This is a simple minimalistic console stopwatch_
 
-
-## Tech
-
-Stopwatch uses figlet to display the time
+![alt text](https://github.com/FirsMak/console-stopwatch/blob/main/image.png?raw=true)
 
 ## Installation
+
+Stopwatch uses figlet to display the time
 
 Install figlet
 
