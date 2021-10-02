@@ -27,13 +27,13 @@ if [ $var != "" ]; then
 	while true; do
 		clear
 		timeOutput
-	read -t 1 -n 1 rs
-	if [ "$rs" != "" ]; then
-		clear
-		timeOutput
-		break
-	fi
-	let "a+=1"
+		read -t 1 -n 1 rs
+		if [ "$rs" != "" ]; then
+			clear
+			timeOutput
+			break
+		fi
+		let "a+=1"
 	done
 fi
 
